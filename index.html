@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>لمعة العيد ✨ | عروض البشرة والجمال</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         /* ═══════════════════════════════════════
@@ -783,6 +782,223 @@
         }
 
         /* ═══════════════════════════════════════
+           NURSE SECTION — الممرضة ساجدة
+        ═══════════════════════════════════════ */
+        .nurse-section {
+            padding: 80px 20px;
+            position: relative;
+            background: linear-gradient(135deg, #1a1210 0%, #2d1f1b 50%, #1a1210 100%);
+            overflow: hidden;
+        }
+
+        .nurse-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .nurse-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .nurse-avatar {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nurse-img-wrapper {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--gold), var(--rose-gold));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
+            border: 3px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .nurse-glow-ring {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            animation: nurseRingPulse 3s ease-in-out infinite;
+        }
+
+        .nurse-glow-ring::before {
+            content: '';
+            position: absolute;
+            inset: -10px;
+            border-radius: 50%;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            animation: nurseRingPulse 3s ease-in-out infinite reverse;
+        }
+
+        @keyframes nurseRingPulse {
+            0%, 100% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.08); opacity: 1; }
+        }
+
+        .nurse-name {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            color: var(--gold-light);
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(212, 175, 55, 0.2);
+        }
+
+        .nurse-title {
+            font-size: 1.1rem;
+            color: var(--rose-gold);
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        /* ═══════════════════════════════════════
+           LOCATIONS SECTION — المواقع
+        ═══════════════════════════════════════ */
+        .locations-section {
+            padding: 60px 20px 80px;
+            background: linear-gradient(135deg, #1a1210 0%, #2d1f1b 50%, #1a1210 100%);
+            position: relative;
+        }
+
+        .locations-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0.3;
+        }
+
+        .locations-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .locations-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            color: var(--gold-light);
+            text-align: center;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .locations-title i {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .location-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 25px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .location-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--gold), var(--rose-gold));
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+
+        .location-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(212, 175, 55, 0.1);
+        }
+
+        .location-card:hover::before {
+            opacity: 1;
+        }
+
+        .location-icon {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(232, 180, 184, 0.2));
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin: 0 auto 15px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .location-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--gold-light);
+            margin-bottom: 20px;
+        }
+
+        .location-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .loc-tag {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            color: var(--rose-gold);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .loc-tag:hover {
+            background: rgba(212, 175, 55, 0.2);
+            transform: scale(1.05);
+        }
+
+        /* ═══════════════════════════════════════
            BOOKING CTA SECTION
         ═══════════════════════════════════════ */
         .booking-section {
@@ -1202,7 +1418,6 @@
         <div class="hero-decor decor-1 parallax-slow"></div>
         <div class="hero-decor decor-2 parallax-slow"></div>
         
-        <!-- Sparkles -->
         <div class="sparkle" style="top: 20%; left: 15%; animation-delay: 0s;"></div>
         <div class="sparkle" style="top: 30%; right: 20%; animation-delay: 0.5s;"></div>
         <div class="sparkle" style="top: 60%; left: 25%; animation-delay: 1s;"></div>
@@ -1272,7 +1487,6 @@
         </div>
 
         <div class="offers-grid">
-            <!-- Offer 1 -->
             <div class="offer-card reveal reveal-delay-1">
                 <div class="offer-badge">الأكثر طلباً</div>
                 <div class="offer-icon">✨</div>
@@ -1291,7 +1505,6 @@
                 </a>
             </div>
 
-            <!-- Offer 2 -->
             <div class="offer-card reveal reveal-delay-2">
                 <div class="offer-icon">👑</div>
                 <h3 class="offer-title">ملكة العيد</h3>
@@ -1310,7 +1523,6 @@
                 </a>
             </div>
 
-            <!-- Offer 3 -->
             <div class="offer-card reveal reveal-delay-3">
                 <div class="offer-icon">💖</div>
                 <h3 class="offer-title">توب لوك</h3>
@@ -1329,7 +1541,6 @@
                 </a>
             </div>
 
-            <!-- Offer 4 - VIP -->
             <div class="offer-card vip reveal reveal-delay-4">
                 <div class="offer-badge">VIP</div>
                 <div class="offer-icon">🔥</div>
@@ -1347,6 +1558,58 @@
                 <a href="https://wa.me/972592183893?text=مرحباً،%20أرغب%20بحجز%20عرض%20VIP%20النتيجة" class="offer-btn" target="_blank">
                     احجزي الآن 💖
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         NURSE SECTION — الممرضة ساجدة
+    ═══════════════════════════════════════ -->
+    <section class="nurse-section" id="nurse">
+        <div class="nurse-container reveal">
+            <div class="nurse-avatar">
+                <div class="nurse-img-wrapper">
+                    <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                <div class="nurse-glow-ring"></div>
+            </div>
+            <h2 class="nurse-name">الممرضة ساجدة مصباح خطاطبة</h2>
+            <p class="nurse-title">خبيرة البشرة والليزر ✨</p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         LOCATIONS SECTION — المواقع
+    ═══════════════════════════════════════ -->
+    <section class="locations-section" id="locations">
+        <div class="locations-container reveal">
+            <h2 class="locations-title">
+                <i class="fa-solid fa-location-dot"></i>
+                متوجدين لخدمتكم في
+            </h2>
+            <div class="locations-grid">
+                <div class="location-card reveal reveal-delay-1">
+                    <div class="location-icon">
+                        <i class="fa-solid fa-hospital"></i>
+                    </div>
+                    <h3>الموقع الأول</h3>
+                    <div class="location-tags">
+                        <span class="loc-tag">طمون</span>
+                        <span class="loc-tag">الرفيد</span>
+                        <span class="loc-tag">عمارة أبو صلاح الحواط</span>
+                    </div>
+                </div>
+                <div class="location-card reveal reveal-delay-2">
+                    <div class="location-icon">
+                        <i class="fa-solid fa-hospital"></i>
+                    </div>
+                    <h3>الموقع الثاني</h3>
+                    <div class="location-tags">
+                        <span class="loc-tag">نابلس</span>
+                        <span class="loc-tag">بيت فوريك</span>
+                        <span class="loc-tag">الحارة الشرقية</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1402,7 +1665,7 @@
             <a href="https://wa.me/972592183893" class="social-link whatsapp" target="_blank" title="WhatsApp">
                 <i class="fa-brands fa-whatsapp"></i>
             </a>
-            <a href="tel:+972501234567" class="social-link phone" title="Phone">
+            <a href="tel:+972592183893" class="social-link phone" title="Phone">
                 <i class="fa-solid fa-phone"></i>
             </a>
         </div>
@@ -1410,7 +1673,7 @@
     </footer>
 
     <!-- ═══════════════════════════════════════
-         FLOATING BUTTONS (بدون هاتف)
+         FLOATING BUTTONS
     ═══════════════════════════════════════ -->
     <div class="floating-buttons">
         <a href="https://wa.me/972592183893" class="float-btn float-whatsapp" data-label="واتساب" target="_blank">
@@ -1425,18 +1688,14 @@
          JAVASCRIPT
     ═══════════════════════════════════════ -->
     <script>
-        // ═══════════════════════════════════════
         // LOADING SCREEN
-        // ═══════════════════════════════════════
         window.addEventListener('load', () => {
             setTimeout(() => {
                 document.getElementById('loader').classList.add('hidden');
             }, 2000);
         });
 
-        // ═══════════════════════════════════════
         // MOUSE GLOW EFFECT
-        // ═══════════════════════════════════════
         const mouseGlow = document.getElementById('mouseGlow');
         let mouseX = 0, mouseY = 0;
         let glowX = 0, glowY = 0;
@@ -1455,9 +1714,7 @@
         }
         animateGlow();
 
-        // ═══════════════════════════════════════
         // PARTICLES
-        // ═══════════════════════════════════════
         const particlesContainer = document.getElementById('particles');
         const particleCount = 25;
 
@@ -1472,10 +1729,7 @@
             particlesContainer.appendChild(particle);
         }
 
-        // ═══════════════════════════════════════
         // COUNTDOWN TIMER
-        // Target: 26/05/2026 at 00:00
-        // ═══════════════════════════════════════
         function updateCountdown() {
             const targetDate = new Date('2026-05-26T00:00:00').getTime();
             const now = new Date().getTime();
@@ -1503,9 +1757,7 @@
         updateCountdown();
         setInterval(updateCountdown, 1000);
 
-        // ═══════════════════════════════════════
         // SCROLL REVEAL
-        // ═══════════════════════════════════════
         const revealElements = document.querySelectorAll('.reveal');
 
         const revealObserver = new IntersectionObserver((entries) => {
@@ -1521,9 +1773,7 @@
 
         revealElements.forEach(el => revealObserver.observe(el));
 
-        // ═══════════════════════════════════════
         // NAVBAR SCROLL EFFECT
-        // ═══════════════════════════════════════
         const navbar = document.getElementById('navbar');
         let lastScroll = 0;
 
@@ -1539,9 +1789,7 @@
             lastScroll = currentScroll;
         });
 
-        // ═══════════════════════════════════════
         // MOBILE MENU TOGGLE
-        // ═══════════════════════════════════════
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
 
@@ -1549,16 +1797,13 @@
             navLinks.classList.toggle('active');
         });
 
-        // Close menu when clicking a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
             });
         });
 
-        // ═══════════════════════════════════════
-        // PARALLAX EFFECT (subtle)
-        // ═══════════════════════════════════════
+        // PARALLAX EFFECT
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const parallaxElements = document.querySelectorAll('.parallax-slow');
@@ -1569,9 +1814,7 @@
             });
         });
 
-        // ═══════════════════════════════════════
-        // SMOOTH SCROLL FOR ANCHOR LINKS
-        // ═══════════════════════════════════════
+        // SMOOTH SCROLL
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
